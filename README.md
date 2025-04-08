@@ -1,4 +1,4 @@
-# 🥗 NutrIA - Votre Assistant Nutritionnel Intelligent
+# 🥗 NutrIA - Your Intelligent Nutrition Assistant
 
 [![Node.js](https://img.shields.io/badge/Node.js-v18+-green.svg)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-v4.18-blue.svg)](https://expressjs.com/)
@@ -6,16 +6,16 @@
 [![React](https://img.shields.io/badge/React-v18+-blue.svg)](https://reactjs.org/)
 [![OpenAI](https://img.shields.io/badge/OpenAI-API-orange.svg)](https://openai.com/)
 
-NutrIA est une application complète de suivi nutritionnel et de bien-être, combinant une interface utilisateur moderne avec un assistant IA intelligent pour vous aider à atteindre vos objectifs de santé.
+NutrIA is a comprehensive nutrition and wellness tracking application, combining a modern user interface with an intelligent AI assistant to help you achieve your health goals.
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-- 🤖 **Assistant IA Nutritionnel** - Analyse intelligente de vos repas et conseils personnalisés
-- 📊 **Suivi des Repas** - Enregistrement et analyse de votre alimentation quotidienne
-- 💪 **Gestion des Exercices** - Suivi de vos activités physiques
-- 🎯 **Objectifs Personnalisés** - Définition et suivi de vos objectifs de santé
-- 😴 **Suivi du Sommeil** - Monitoring de la qualité de votre repos
-- 💡 **Conseils Personnalisés** - Tips adaptés à votre profil et vos objectifs
+- 🤖 **AI Nutrition Assistant** - Intelligent meal analysis and personalized advice
+- 📊 **Meal Tracking** - Record and analyze your daily nutrition
+- 💪 **Exercise Management** - Track your physical activities
+- 🎯 **Custom Goals** - Set and track your health objectives
+- 😴 **Sleep Tracking** - Monitor your rest quality
+- 💡 **Personalized Tips** - Tips adapted to your profile and goals
 
 ## 🏗️ Architecture
 
@@ -24,41 +24,41 @@ NutrIA est une application complète de suivi nutritionnel et de bien-être, com
 frontend/
 ├── src/
 │   ├── components/
-│   │   ├── assistant/    # Interface de chat IA
-│   │   ├── common/       # Composants réutilisables
-│   │   ├── exercises/    # Gestion des exercices
-│   │   └── meals/        # Gestion des repas
-│   ├── contexts/         # Contextes React
-│   ├── pages/           # Pages principales
-│   └── services/        # Services API
+│   │   ├── assistant/    # AI chat interface
+│   │   ├── common/       # Reusable components
+│   │   ├── exercises/    # Exercise management
+│   │   └── meals/        # Meal management
+│   ├── contexts/         # React contexts
+│   ├── pages/           # Main pages
+│   └── services/        # API services
 ```
 
 ### Backend (Node.js + Express)
 ```
-├── models/              # Modèles MongoDB
-├── routes/             # Routes API
-├── services/           # Logique métier
-└── server.js           # Point d'entrée
+├── models/              # MongoDB models
+├── routes/             # API routes
+├── services/           # Business logic
+└── server.js           # Entry point
 ```
 
-## 🚀 Démarrage Rapide
+## 🚀 Quick Start
 
-### Prérequis
+### Prerequisites
 
-- Node.js (v18 ou supérieur)
-- MongoDB (v5 ou supérieur)
-- npm ou yarn
-- Compte OpenAI avec clé API
+- Node.js (v18 or higher)
+- MongoDB (v5 or higher)
+- npm or yarn
+- OpenAI account with API key
 
 ### Installation
 
-1. **Cloner le repository**
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/votre-username/nutria.git
+   git clone https://github.com/your-username/nutria.git
    cd nutria
    ```
 
-2. **Installer les dépendances**
+2. **Install dependencies**
    ```bash
    # Backend
    npm install
@@ -70,15 +70,15 @@ frontend/
 
 3. **Configuration**
    
-   Créer un fichier `.env` à la racine :
+   Create a `.env` file at the root:
    ```env
    PORT=3000
    MONGODB_URI=mongodb://localhost:27017/nutria
-   OPENAI_API_KEY=votre_clé_api
-   OPENAI_ASSISTANT_ID=votre_assistant_id
+   OPENAI_API_KEY=your_api_key
+   OPENAI_ASSISTANT_ID=your_assistant_id
    ```
 
-4. **Lancer l'application**
+4. **Launch the application**
    ```bash
    # Terminal 1 - Backend
    npm run dev
@@ -88,43 +88,43 @@ frontend/
    npm start
    ```
 
-L'application sera accessible sur :
-- Frontend : http://localhost:3000
-- Backend API : http://localhost:3001
+The application will be accessible at:
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:3001
 
 ## 🔌 API Endpoints
 
-### Assistant IA
-- `POST /api/assistant/threads` - Créer une nouvelle conversation
-- `POST /api/assistant/messages` - Envoyer un message
-- `GET /api/assistant/threads/:threadId/messages` - Historique des messages
+### AI Assistant
+- `POST /api/assistant/threads` - Create a new conversation
+- `POST /api/assistant/messages` - Send a message
+- `GET /api/assistant/threads/:threadId/messages` - Message history
 
-### Repas
-- `GET /api/meals` - Liste des repas
-- `POST /api/meals` - Ajouter un repas
-- `PUT /api/meals/:id` - Modifier un repas
-- `DELETE /api/meals/:id` - Supprimer un repas
+### Meals
+- `GET /api/meals` - List meals
+- `POST /api/meals` - Add a meal
+- `PUT /api/meals/:id` - Update a meal
+- `DELETE /api/meals/:id` - Delete a meal
 
-### Exercices
-- `GET /api/exercises` - Liste des exercices
-- `POST /api/exercises` - Ajouter un exercice
-- `PUT /api/exercises/:id` - Modifier un exercice
-- `DELETE /api/exercises/:id` - Supprimer un exercice
+### Exercises
+- `GET /api/exercises` - List exercises
+- `POST /api/exercises` - Add an exercise
+- `PUT /api/exercises/:id` - Update an exercise
+- `DELETE /api/exercises/:id` - Delete an exercise
 
 ## 🧪 Tests
 
 ```bash
-# Exécuter les tests
+# Run tests
 npm test
 
-# Mode watch
+# Watch mode
 npm run test:watch
 
-# Couverture de code
+# Code coverage
 npm run test:coverage
 ```
 
-## 🛠️ Technologies Utilisées
+## 🛠️ Technologies Used
 
 - **Frontend**
   - React 18+
@@ -142,14 +142,14 @@ npm run test:coverage
 
 ## 📝 License
 
-Ce projet est sous licence Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0). Cette licence permet la modification et la distribution du code, mais interdit toute utilisation commerciale. Voir le fichier `LICENSE` pour plus de détails.
+This project is licensed under Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0). This license allows modification and distribution of the code but prohibits any commercial use. See the `LICENSE` file for more details.
 
-## 🙏 Remerciements
+## 🙏 Acknowledgments
 
-- OpenAI pour leur API d'assistant
-- La communauté open source pour les nombreuses bibliothèques utilisées
-- Tous les contributeurs du projet
+- OpenAI for their assistant API
+- The open source community for the many libraries used
+- All project contributors
 
 ---
 
-Développé avec ❤️ par Akralan
+Developed with ❤️ by Akralan
